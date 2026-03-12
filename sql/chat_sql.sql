@@ -1,7 +1,7 @@
 CREATE TABLE t_users (
     userid BIGINT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(50) NOT NULL UNIQUE,
-    password VARCHAR(255) NOT NULL,
+    password VARCHAR(512) NOT NULL,
     age INT,
     sex VARCHAR(10),
     soi VARCHAR(50),
@@ -33,4 +33,5 @@ CREATE TABLE t_requests (
     receiver_uid BIGINT NOT NULL,
     created_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (sender_uid, receiver_uid)
+
 );
